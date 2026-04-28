@@ -1,32 +1,45 @@
 # Maua JR Revolut Landing Page
 
-Landing page premium da Maua Junior inspirada na sofisticacao visual da Revolut, desenvolvida com HTML5, CSS3 moderno e JavaScript Vanilla.
+Landing page da Maua Junior inspirada na linguagem visual da Revolut, desenvolvida com HTML, CSS e JavaScript Vanilla.
 
-## Objetivo do projeto
+## Escopo atual
 
-Recriar uma homepage de alta fidelidade visual para a Maua Junior, misturando:
+O projeto hoje contem:
 
-- hierarquia, impacto e atmosfera premium da Revolut
-- identidade institucional azul, preta e branca da Maua Junior
-- foco tecnico em responsividade, semantica, animacao e organizacao de codigo
+- homepage principal em `index.html`
+- navegacao preparada para paginas separadas
+- paginas base vazias para `quem-somos.html`, `servicos.html` e `contato.html`
+- animacao principal da hero com entrada e retorno refinados
+- responsividade principal para desktop, notebook, tablet e mobile
+- assets locais versionados dentro do proprio repositorio
+- acessibilidade com vLibras
+- atalho flutuante para WhatsApp
 
-## Tecnologias usadas
+## Tecnologias
 
 - HTML5 semantico
-- CSS3 moderno com variaveis, Grid, Flexbox e arquitetura modular
-- JavaScript Vanilla para navegacao, reveals e animacao por scroll
+- CSS3 modularizado por secao
+- JavaScript Vanilla
+- `IntersectionObserver` para reveals
+- widget oficial do vLibras
 
-## Estrutura de pastas
+## Estrutura do projeto
 
 ```text
 /
 ├── index.html
+├── quem-somos.html
+├── servicos.html
+├── contato.html
 ├── README.md
-├── read.me
 ├── assets/
 │   ├── images/
-│   ├── icons/
+│   │   ├── fundo-tela-1.jpg
+│   │   ├── imagem-1.png
+│   │   └── imagem-2.png
 │   └── logos/
+│       ├── logo-maua-junior.png
+│       └── logo-maua-junior-mais.png
 ├── css/
 │   ├── reset.css
 │   ├── variables.css
@@ -44,84 +57,43 @@ Recriar uma homepage de alta fidelidade visual para a Maua Junior, misturando:
     └── navigation.js
 ```
 
-## Como rodar o projeto
+## Como executar
 
 1. Abra a pasta do projeto.
-2. Execute o arquivo `index.html` no navegador.
-3. Nenhuma dependencia externa de framework e necessaria.
+2. Execute `index.html` no navegador.
+3. Para navegação local, mantenha a estrutura de arquivos completa, incluindo `assets/`, `css/` e `js/`.
 
-## Principais secoes
+## Funcionalidades implementadas
 
-- Header com navegacao sticky e menu hamburguer em mobile
-- Hero com visual imersivo, gradientes e card premium inspirado na Revolut
-- Transicao de scroll que aproxima o efeito de card transformando a primeira dobra
-- Secao de servicos com 3 cards principais
-- Contato rapido com WhatsApp, email e endereco
-- Cases de sucesso em paineis de tela cheia
-- Secao institucional com vantagens da Maua Junior
-- CTA final com fluxo em 3 passos
-- Footer amplo com colunas de navegacao e contatos
+- header fixo com estado inicial e estado ao scroll
+- menu mobile com toggle
+- hero animada com entrada inspirada na Revolut
+- retorno suave da animacao ao voltar para o topo
+- bloco de resultados com transicao apos a hero
+- secao de servicos
+- secao de contato rapido
+- secao de cases com alternancia de layout entre texto e imagem
+- secao institucional
+- CTA final
+- footer com navegacao e contatos
+- botao flutuante de WhatsApp
+- integracao com vLibras
 
-## Responsividade
+## Assets locais
 
-O layout foi pensado em abordagem mobile-first adaptada para:
+As imagens usadas na homepage agora estao dentro do proprio repositorio, em `assets/`, para evitar links quebrados no GitHub Pages ou em qualquer ambiente externo.
 
-- desktop grande
-- notebook
-- tablet
-- mobile
+## Proximos passos sugeridos
 
-Os comportamentos mobile mais importantes:
+- preencher `quem-somos.html`
+- preencher `servicos.html`
+- preencher `contato.html`
+- substituir os placeholders dos cases pelas imagens finais de resultado das empresas
+- revisar textos institucionais finais
+- publicar em GitHub Pages ou hospedagem equivalente
 
-- menu hamburguer funcional
-- cards empilhados
-- transicao da hero simplificada
-- cases com leitura confortavel sem quebra horizontal
-- footer reorganizado em pilha
+## Observacoes
 
-## Animacoes implementadas
-
-- cabecalho com mudanca visual ao scroll
-- reveals com `IntersectionObserver`
-- card principal da hero reagindo ao scroll com `requestAnimationFrame`
-- hover suave em cards, links e botoes
-
-## O que foi inspirado na Revolut
-
-- hero de alto impacto com escala tipografica forte
-- atmosfera premium com gradientes, vidro e cards amplos
-- secao de transicao apos a primeira dobra
-- blocos espacados com composicao editorial
-- footer escuro com peso institucional
-
-## O que foi adaptado para a Maua Junior
-
-- paleta azul, branca e preta
-- textos institucionais e servicos reais da empresa
-- cases com linguagem consultiva
-- CTA final voltado para diagnostico comercial
-- identidade mais academica e estrategica
-
-## Checklist final
-
-- [x] HTML semantico criado
-- [x] CSS separado por responsabilidade
-- [x] JavaScript separado por responsabilidade
-- [x] Navbar fiel a proposta
-- [x] Menu mobile funcionando
-- [x] Hero visualmente forte
-- [x] Animacao estilo Revolut implementada
-- [x] Secao de servicos criada
-- [x] Contato rapido criado
-- [x] Cases de sucesso criados
-- [x] Secao sobre a Maua Junior criada
-- [x] CTA final criado
-- [x] Footer grande criado
-- [x] Responsivo em desktop
-- [x] Responsivo em tablet
-- [x] Responsivo em mobile
-- [x] Sem scroll horizontal
-- [x] Sem erros no console previstos pela implementacao
-- [x] Sem links externos obrigatorios quebrados
-- [x] Codigo organizado
-- [x] README criado
+- o projeto nao depende de framework
+- o vLibras depende do script externo oficial do governo
+- o link do WhatsApp utiliza o numero comercial configurado no projeto
