@@ -1,0 +1,112 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  padding: 1rem 0;
+  color: var(--color-white);
+  transition:
+    padding var(--transition-base),
+    background-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base),
+    backdrop-filter var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.site-header.is-scrolled {
+  padding: 0.65rem 0;
+  background: rgba(245, 247, 251, 0.78);
+  color: var(--color-text);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 40px rgba(9, 16, 31, 0.08);
+}
+
+.header-shell {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  width: auto;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.site-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.site-nav a {
+  position: relative;
+  font-weight: 500;
+  color: currentColor;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.45rem;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--color-primary), rgba(36, 95, 245, 0.35));
+  transition: transform var(--transition-base);
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.menu-toggle {
+  display: none;
+  place-items: center;
+  gap: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.site-header.is-scrolled .menu-toggle {
+  background: rgba(13, 21, 40, 0.06);
+  border-color: rgba(13, 21, 40, 0.1);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}

@@ -1,0 +1,82 @@
+.quick-contact-shell {
+  display: grid;
+  gap: 2rem;
+}
+
+.quick-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.quick-contact-card {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quick-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 1.1rem;
+}
+
+.quick-contact-card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.quick-contact-card a {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.cta {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(240, 244, 251, 0.78));
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.step-card {
+  padding: 1.5rem 1rem;
+  border-radius: 1.75rem;
+  text-align: center;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin-bottom: 0.8rem;
+  border-radius: 50%;
+  background: rgba(19, 64, 166, 0.1);
+  color: var(--color-primary);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.step-card p {
+  color: var(--color-text-soft);
+  font-size: 1.05rem;
+}
+
+.cta-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
