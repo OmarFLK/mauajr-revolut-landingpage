@@ -22,9 +22,14 @@ if (revealElements.length) {
 const heroStory = document.querySelector("[data-hero-story]");
 
 if (heroStory) {
+  const STATIC_HERO_BREAKPOINT = 960;
   let animationTimeout = null;
   let returnTimeout = null;
   let storyState = "initial";
+
+  const shouldUseStaticHero = () =>
+    window.innerWidth <= STATIC_HERO_BREAKPOINT ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const resetHeroStory = () => {
     window.clearTimeout(animationTimeout);
@@ -32,7 +37,21 @@ if (heroStory) {
     animationTimeout = null;
     returnTimeout = null;
     storyState = "initial";
+    heroStory.classList.remove("is-animating", "is-complete", "is-returning", "is-static");
+  };
+
+  const setStaticHeroStory = () => {
+    if (storyState === "static") {
+      return;
+    }
+
+    window.clearTimeout(animationTimeout);
+    window.clearTimeout(returnTimeout);
+    animationTimeout = null;
+    returnTimeout = null;
+    storyState = "static";
     heroStory.classList.remove("is-animating", "is-complete", "is-returning");
+    heroStory.classList.add("is-static");
   };
 
   const finishReturnHeroStory = () => {
@@ -72,13 +91,13 @@ if (heroStory) {
   };
 
   const syncHeroStory = () => {
-    if (window.innerWidth <= 720) {
-      window.clearTimeout(animationTimeout);
-      window.clearTimeout(returnTimeout);
-      storyState = "complete";
-      heroStory.classList.remove("is-animating", "is-returning");
-      heroStory.classList.add("is-complete");
+    if (shouldUseStaticHero()) {
+      setStaticHeroStory();
       return;
+    }
+
+    if (storyState === "static") {
+      resetHeroStory();
     }
 
     const storyRect = heroStory.getBoundingClientRect();
