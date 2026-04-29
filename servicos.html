@@ -17,10 +17,13 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <header class="site-header is-scrolled" data-header>
+
+    <header class="site-header" data-header>
       <div class="shell header-shell">
         <a class="brand" href="index.html" aria-label="Maua Junior">
           <img
@@ -29,7 +32,6 @@
             alt="Logo Maua Junior"
           />
         </a>
-
         <button
           class="menu-toggle"
           type="button"
@@ -42,21 +44,441 @@
           <span></span>
           <span class="sr-only">Abrir menu</span>
         </button>
-
         <nav class="site-nav" id="site-navigation" data-navigation>
           <a href="index.html">Home</a>
           <a href="quem-somos.html">Quem Somos</a>
-          <a href="servicos.html">Servicos</a>
+          <a href="servicos.html" class="nav-active">Servicos</a>
           <a href="contato.html">Contato</a>
         </nav>
-
         <a class="button button-primary header-cta" href="contato.html">
           Entre em contato conosco
         </a>
       </div>
     </header>
 
-    <main class="empty-page"></main>
+    <main>
+
+      <!-- =============================================
+           HERO
+           ============================================= -->
+      <section class="servicos-hero section">
+        <div class="shell">
+          <div class="servicos-hero-inner reveal">
+            <p class="eyebrow">Nossos Servicos</p>
+            <h1>Solucoes que <span class="servicos-hero-highlight">transformam</span> seu negocio</h1>
+            <p class="servicos-hero-desc">
+              Engenharia, Administracao e Tecnologia aplicadas por estudantes
+              do Instituto Maua de Tecnologia — expertise academica com
+              resultado real para sua empresa.
+            </p>
+            <a class="button button-primary" href="contato.html">
+              Solicitar diagnostico gratuito
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           NAVEGAÇÃO POR NÚCLEO (tabs)
+           ============================================= -->
+      <section class="servicos-nucleos section" id="nucleos">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Nossos Nucleos</p>
+            <h2>Escolha a solucao certa para o seu desafio.</h2>
+          </div>
+
+          <!-- Tab Buttons -->
+          <div class="nucleo-tabs reveal" role="tablist" aria-label="Nucleos de servico">
+            <button class="nucleo-tab active" role="tab" data-tab="tecnologia" aria-selected="true">
+              <span class="nucleo-tab-icon">💻</span> Tecnologia
+            </button>
+            <button class="nucleo-tab" role="tab" data-tab="gestao" aria-selected="false">
+              <span class="nucleo-tab-icon">📊</span> Gestao Empresarial
+            </button>
+            <button class="nucleo-tab" role="tab" data-tab="design" aria-selected="false">
+              <span class="nucleo-tab-icon">🎨</span> Design
+            </button>
+            <button class="nucleo-tab" role="tab" data-tab="processos" aria-selected="false">
+              <span class="nucleo-tab-icon">⚙️</span> Gestao de Processos
+            </button>
+            <button class="nucleo-tab" role="tab" data-tab="quimica" aria-selected="false">
+              <span class="nucleo-tab-icon">🧪</span> Quimica/Alimentos
+            </button>
+          </div>
+
+          <!-- ---- TECNOLOGIA ---- -->
+          <div class="nucleo-panel active" id="tab-tecnologia" role="tabpanel">
+            <div class="nucleo-panel-header">
+              <h3>Nucleo de Tecnologia</h3>
+              <p>Solucoes digitais com as tecnologias mais modernas para automatizar, escalar e inovar.</p>
+            </div>
+            <div class="services-grid">
+
+              <article class="service-card reveal">
+                <div class="service-icon">IA</div>
+                <h3>Implementacao de IA</h3>
+                <p>Automacao de processos, analise de dados e solucoes personalizadas que reduzem custos, aumentam a produtividade e entregam resultados mensuraveis.</p>
+                <div class="tag-list">
+                  <span>Automacao</span>
+                  <span>ROI Mensuravel</span>
+                </div>
+              </article>
+
+              <article class="service-card service-card-featured reveal">
+                <span class="service-card-badge">Mais procurado</span>
+                <div class="service-icon">CD</div>
+                <h3>Ciencia de Dados</h3>
+                <p>Organizacao e analise de dados em quatro frentes, oferecendo insights claros para decisoes mais assertivas no seu negocio.</p>
+                <div class="tag-list">
+                  <span>Analytics</span>
+                  <span>Insights</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">DS</div>
+                <h3>Desenvolvimento de Sistemas</h3>
+                <p>Criacao de sistemas sob medida que aumentam a eficiencia operacional da sua empresa com tecnologia moderna e robusta.</p>
+                <div class="tag-list">
+                  <span>Sob Medida</span>
+                  <span>Eficiencia</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">DW</div>
+                <h3>Desenvolvimento de Websites</h3>
+                <p>Sites feitos sob medida com as tecnologias mais modernas utilizadas pelos desenvolvedores, com foco em performance e conversao.</p>
+                <div class="tag-list">
+                  <span>Landing Page</span>
+                  <span>Responsivo</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">AP</div>
+                <h3>Desenvolvimento de Aplicativos</h3>
+                <p>Apps modernos e intuitivos, focados em mobilidade e acesso pratico as operacoes do seu negocio de qualquer lugar.</p>
+                <div class="tag-list">
+                  <span>Mobile</span>
+                  <span>UX Intuitivo</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ---- GESTÃO EMPRESARIAL ---- -->
+          <div class="nucleo-panel" id="tab-gestao" role="tabpanel" hidden>
+            <div class="nucleo-panel-header">
+              <h3>Nucleo de Gestao Empresarial</h3>
+              <p>Solucoes estrategicas para crescer com seguranca, dados e planejamento.</p>
+            </div>
+            <div class="services-grid">
+
+              <article class="service-card reveal">
+                <div class="service-icon">AF</div>
+                <h3>Analise Financeira</h3>
+                <p>Estudo das financas da empresa, promovendo saude financeira, aumentando a rentabilidade e diminuindo os custos operacionais.</p>
+                <div class="tag-list">
+                  <span>Rentabilidade</span>
+                  <span>Reducao de Custos</span>
+                </div>
+              </article>
+
+              <article class="service-card service-card-featured reveal">
+                <span class="service-card-badge">Mais procurado</span>
+                <div class="service-icon">PN</div>
+                <h3>Plano de Negocio</h3>
+                <p>Desenvolvimento de um plano personalizado para sua empresa, aumentando as possibilidades de um negocio de sucesso sustentavel.</p>
+                <div class="tag-list">
+                  <span>Estrategia</span>
+                  <span>Planejamento</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">PM</div>
+                <h3>Pesquisa de Mercado</h3>
+                <p>Analise de mercado abordando diversas frentes, proporcionando melhor entendimento acerca das decisoes a serem tomadas.</p>
+                <div class="tag-list">
+                  <span>Mapeamento</span>
+                  <span>Perfil de Clientes</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ---- DESIGN ---- -->
+          <div class="nucleo-panel" id="tab-design" role="tabpanel" hidden>
+            <div class="nucleo-panel-header">
+              <h3>Nucleo de Design</h3>
+              <p>Identidade visual e design de produto para sua marca se destacar no mercado.</p>
+            </div>
+            <div class="services-grid">
+
+              <article class="service-card service-card-featured reveal">
+                <span class="service-card-badge">Mais procurado</span>
+                <div class="service-icon">IV</div>
+                <h3>Identidade Visual</h3>
+                <p>Entendimento da identidade e realidade da empresa, com o intuito de atualizar ou desenvolver uma identidade visual condizente com o perfil do cliente.</p>
+                <div class="tag-list">
+                  <span>Branding</span>
+                  <span>Marca</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">DP</div>
+                <h3>Design de Produtos</h3>
+                <p>Idealizacao de novos produtos conforme demanda e necessidade, passando pela concepcao inicial, sketch, desenho tecnico e prototipagem.</p>
+                <div class="tag-list">
+                  <span>Prototipagem</span>
+                  <span>Inovacao</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ---- GESTÃO DE PROCESSOS ---- -->
+          <div class="nucleo-panel" id="tab-processos" role="tabpanel" hidden>
+            <div class="nucleo-panel-header">
+              <h3>Nucleo de Gestao de Processos</h3>
+              <p>Otimizacao e padronizacao para fluxos mais eficientes, claros e escalaveis.</p>
+            </div>
+            <div class="services-grid">
+
+              <article class="service-card reveal">
+                <div class="service-icon">CA</div>
+                <h3>Cronoanalise</h3>
+                <p>Estruturacao dos processos por meio de fluxogramas e diagramas, buscando melhorar a eficiencia e reduzir o tempo de ciclo da sua empresa.</p>
+                <div class="tag-list">
+                  <span>Fluxogramas</span>
+                  <span>Eficiencia</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">PO</div>
+                <h3>Desenvolvimento de POPs</h3>
+                <p>Documento com o roteiro de cada etapa do processo produtivo, garantindo o funcionamento padrao de tarefas rotineiras na producao.</p>
+                <div class="tag-list">
+                  <span>Padronizacao</span>
+                  <span>Producao</span>
+                </div>
+              </article>
+
+              <article class="service-card service-card-featured reveal">
+                <span class="service-card-badge">Mais procurado</span>
+                <div class="service-icon">MP</div>
+                <h3>Mapeamento de Processos</h3>
+                <p>Analise completa das atividades da empresa para identificar gargalos, oportunidades de melhoria e aumentar a eficiencia operacional.</p>
+                <div class="tag-list">
+                  <span>Gargalos</span>
+                  <span>Melhoria Continua</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">OP</div>
+                <h3>Otimizacao de Processos</h3>
+                <p>Acompanhamento dos processos para garantir que todos os gargalos sejam trabalhados, gerando ganhos reais de eficiencia e reducao de desperdicio.</p>
+                <div class="tag-list">
+                  <span>Eficiencia</span>
+                  <span>Automatizacao</span>
+                </div>
+              </article>
+
+              <article class="service-card reveal">
+                <div class="service-icon">PP</div>
+                <h3>Padronizacao de Processos</h3>
+                <p>Estabelecimento de diretrizes e praticas consistentes para a execucao de atividades, garantindo qualidade e previsibilidade na operacao.</p>
+                <div class="tag-list">
+                  <span>Diretrizes</span>
+                  <span>Qualidade</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ---- QUÍMICA/ALIMENTOS ---- -->
+          <div class="nucleo-panel" id="tab-quimica" role="tabpanel" hidden>
+            <div class="nucleo-panel-header">
+              <h3>Nucleo de Quimica/Alimentos</h3>
+              <p>Do conceito ao mercado — formulacoes inovadoras com suporte dos laboratorios do Instituto Maua de Tecnologia.</p>
+            </div>
+            <div class="services-grid">
+
+              <article class="service-card service-card-featured reveal">
+                <span class="service-card-badge">Especialidade unica</span>
+                <div class="service-icon">FA</div>
+                <h3>Formulacao de Alimentos</h3>
+                <p>Formulacoes inovadoras que atendem demandas e superam expectativas, com pesquisa aplicada e validacao laboratorial no Instituto Maua de Tecnologia.</p>
+                <div class="tag-list">
+                  <span>Pesquisa</span>
+                  <span>Escalonamento</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =============================================
+           FAIXA DE NÚMEROS
+           ============================================= -->
+      <section class="servicos-numbers section section-dark">
+        <div class="shell">
+          <div class="section-heading section-heading-light reveal">
+            <p class="eyebrow">Maua Junior em numeros</p>
+            <h2>Resultados que falam por si.</h2>
+          </div>
+          <div class="servicos-numbers-grid">
+            <div class="servicos-number-item reveal">
+              <strong class="servicos-number-value" data-target="50">0</strong>
+              <span class="servicos-number-suffix">+</span>
+              <p>Projetos entregues</p>
+            </div>
+            <div class="servicos-number-item reveal">
+              <strong class="servicos-number-value" data-target="30">0</strong>
+              <span class="servicos-number-suffix">+</span>
+              <p>Empresas atendidas</p>
+            </div>
+            <div class="servicos-number-item reveal">
+              <strong class="servicos-number-value" data-target="90">0</strong>
+              <span class="servicos-number-suffix">+</span>
+              <p>NPS medio</p>
+            </div>
+            <div class="servicos-number-item reveal">
+              <strong class="servicos-number-value" data-target="5">0</strong>
+              <span class="servicos-number-suffix"></span>
+              <p>Nucleos especializados</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           COMO FUNCIONA
+           ============================================= -->
+      <section class="servicos-process section" id="como-funciona">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Como funciona</p>
+            <h2>Do primeiro contato ao resultado final.</h2>
+          </div>
+          <div class="servicos-process-grid">
+            <article class="servicos-process-card reveal">
+              <span class="servicos-process-number">01</span>
+              <span class="servicos-process-icon" aria-hidden="true">🧭</span>
+              <h3>Nos conte seu desafio</h3>
+              <p>Entre em contato e compartilhe os problemas que sua empresa enfrenta. Sem compromisso.</p>
+            </article>
+            <article class="servicos-process-card reveal">
+              <span class="servicos-process-number">02</span>
+              <span class="servicos-process-icon" aria-hidden="true">🩺</span>
+              <h3>Diagnostico gratuito</h3>
+              <p>Nosso time analisa o cenario e mapeia oportunidades em uma reuniao de diagnostico sem custo.</p>
+            </article>
+            <article class="servicos-process-card reveal">
+              <span class="servicos-process-number">03</span>
+              <span class="servicos-process-icon" aria-hidden="true">🧠</span>
+              <h3>Consultor especialista</h3>
+              <p>Com base nas suas informacoes, selecionamos o consultor mais adequado para o seu desafio.</p>
+            </article>
+            <article class="servicos-process-card reveal">
+              <span class="servicos-process-number">04</span>
+              <span class="servicos-process-icon" aria-hidden="true">🤝</span>
+              <h3>Execucao e entrega</h3>
+              <p>Executamos o projeto com acompanhamento continuo ate a entrega final e validacao dos resultados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           CTA FINAL
+           ============================================= -->
+      <section class="servicos-cta section section-dark">
+        <div class="shell">
+          <div class="section-heading section-heading-light reveal">
+            <p class="eyebrow">Vamos comecar?</p>
+            <h2>Sua empresa precisa dos nossos servicos!</h2>
+          </div>
+          <div class="cta-action reveal">
+            <a class="button button-primary" href="contato.html">
+              Entre em contato conosco
+            </a>
+            <a class="button button-dark" href="https://wa.me/5511976257520" target="_blank" rel="noreferrer">
+              Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-footer" href="index.html">
+            <img
+              class="brand-logo brand-logo-footer"
+              src="assets/logos/logo-maua-junior-mais.png"
+              alt="Logo Maua Junior"
+            />
+          </a>
+          <p>
+            A Maua Junior e uma entidade sem fins lucrativos, voltada para o
+            desenvolvimento profissional de alunos do Instituto Maua de
+            Tecnologia atraves da realizacao de projetos personalizados para
+            clientes.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="https://wa.me/5511976257520" aria-label="WhatsApp">WA</a>
+            <a href="#" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Paginas</h3>
+          <a href="index.html">Home</a>
+          <a href="quem-somos.html">Quem somos</a>
+          <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-column">
+          <h3>Servicos</h3>
+          <a href="servicos.html">Tecnologia</a>
+          <a href="servicos.html">Gestao Empresarial</a>
+          <a href="servicos.html">Design</a>
+          <a href="servicos.html">Gestao de Processos</a>
+          <a href="servicos.html">Quimica/Alimentos</a>
+        </div>
+        <div class="footer-column">
+          <h3>Contatos</h3>
+          <a href="tel:+5511976257520">+55 11 97625-7520</a>
+          <a href="mailto:dpcomercial@mauajr.com">dpcomercial@mauajr.com</a>
+          <a
+            href="https://maps.google.com/?q=Pra%C3%A7a+Mau%C3%A1,+1+-+Mau%C3%A1,+S%C3%A3o+Caetano+do+Sul+-+SP,+09580-900"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Praca Maua, 1 - Maua, Sao Caetano do Sul - SP, 09580-900
+          </a>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>Maua Jr | Todos os direitos reservados.</p>
+        <p>CNPJ: 62.571.401/0001-59</p>
+        <p>Desenvolvido por Maua Junior.</p>
+      </div>
+    </footer>
 
     <a
       class="whatsapp-float"
@@ -76,7 +498,9 @@
     </div>
 
     <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/services.js" defer></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
       new window.VLibras.Widget("https://vlibras.gov.br/app");

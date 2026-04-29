@@ -1,14 +1,20 @@
+/* =============================================
+   SERVICES.CSS — Mauá Júnior
+   Responsável: Caio Arthuzo Dania
+   ============================================= */
+
+/* ---- Estilos existentes (preservados) ---- */
+
 .services {
   position: relative;
 }
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
-
 .service-card {
+  position: relative;
   display: grid;
   align-content: start;
   gap: 1rem;
@@ -18,14 +24,12 @@
   border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(16px);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
-
 .service-card:hover {
   transform: translateY(-4px);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
   box-shadow: 0 22px 48px rgba(9, 16, 31, 0.14);
 }
-
 .service-icon {
   display: grid;
   place-items: center;
@@ -36,23 +40,19 @@
   color: var(--color-primary);
   font-weight: 800;
 }
-
 .service-card h3 {
   font-size: 1.55rem;
   line-height: 1;
 }
-
 .service-card p {
   color: var(--color-text-soft);
   font-size: 1rem;
 }
-
 .tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
 }
-
 .tag-list span {
   padding: 0.55rem 0.8rem;
   border-radius: var(--radius-pill);
@@ -61,24 +61,20 @@
   font-size: 0.84rem;
   font-weight: 600;
 }
-
 .about {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(240, 244, 251, 0.86));
 }
-
 .about-summary {
   max-width: 48rem;
   margin-bottom: 2rem;
   font-size: 1.05rem;
   color: var(--color-text-soft);
 }
-
 .advantage-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-
 .advantage-card {
   padding: 1.6rem;
   border-radius: 1.75rem;
@@ -86,7 +82,6 @@
   border: 1px solid rgba(255, 255, 255, 0.86);
   box-shadow: var(--shadow-card);
 }
-
 .advantage-icon {
   display: inline-flex;
   align-items: center;
@@ -99,12 +94,261 @@
   color: var(--color-primary);
   font-size: 1.35rem;
 }
-
 .advantage-card h3 {
   margin-bottom: 0.7rem;
   font-size: 1.35rem;
 }
-
 .advantage-card p {
   color: var(--color-text-soft);
+}
+
+/* =============================================
+   NOVOS ESTILOS — servicos.html
+   ============================================= */
+
+/* ---- Card destaque ---- */
+.service-card-featured {
+  border: 2px solid var(--color-primary);
+  background: linear-gradient(160deg, rgba(19, 64, 166, 0.06), rgba(255, 255, 255, 0.82));
+}
+.service-card-badge {
+  position: absolute;
+  top: -0.8rem;
+  left: 1.6rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---- Hero da página ---- */
+.servicos-hero {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.servicos-hero-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+.servicos-hero-inner h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.servicos-hero-highlight {
+  color: var(--color-primary);
+}
+.servicos-hero-desc {
+  max-width: 40rem;
+  color: var(--color-text-soft);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ---- Núcleos / Tabs ---- */
+.servicos-nucleos {
+  position: relative;
+}
+
+.nucleo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.nucleo-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(19, 64, 166, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-soft);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+.nucleo-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(19, 64, 166, 0.05);
+}
+
+.nucleo-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.nucleo-tab-icon {
+  font-size: 1rem;
+}
+
+/* ---- Panel de núcleo ---- */
+.nucleo-panel {
+  animation: fadePanel 0.35s ease;
+}
+
+.nucleo-panel-header {
+  margin-bottom: 2rem;
+}
+
+.nucleo-panel-header h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.nucleo-panel-header p {
+  color: var(--color-text-soft);
+  font-size: 1rem;
+}
+
+@keyframes fadePanel {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Faixa de números ---- */
+.servicos-numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.servicos-number-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.servicos-number-value {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #fff;
+  line-height: 1;
+}
+.servicos-number-suffix {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  vertical-align: super;
+  line-height: 1;
+}
+.servicos-number-item p {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+}
+
+/* ---- Processo ---- */
+.servicos-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.servicos-process-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 1.6rem;
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(16px);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.servicos-process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(9, 16, 31, 0.14);
+}
+.servicos-process-number {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+.servicos-process-icon {
+  font-size: 1.8rem;
+}
+.servicos-process-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+.servicos-process-card p {
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---- CTA Final ---- */
+.servicos-cta .cta-action {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ---- Nav ativo ---- */
+.nav-active {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .servicos-numbers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .servicos-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .nucleo-tabs {
+    gap: 0.4rem;
+  }
+  .nucleo-tab {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.9rem;
+  }
+  .servicos-process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos-numbers-grid {
+    grid-template-columns: 1fr;
+  }
 }
